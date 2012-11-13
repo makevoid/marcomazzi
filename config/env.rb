@@ -16,3 +16,26 @@ env = ENV["RACK_ENV"] || "development"
 # DataMapper.setup :default, "mysql://localhost/marcomazzi_#{env}"
 require_all "#{path}/models"
 # DataMapper.finalize
+
+
+# news
+
+require "#{path}/lib/simple_article_format"
+
+NEWS = SimpleArticleFormat.load "#{path}/config/news.saf"
+
+# email
+
+mail_pass = File.read(File.expand_path "~/.password").strip.gsub(/33/, '')
+
+smtp_options = {
+  address:    "smtp.gmail.com",
+  port:       587,
+  user_name:  'm4kevoid@gmail.com',
+  password:   mail_pass,
+  enable_starttls_auto: true
+}
+
+Mail.defaults do
+  delivery_method :smtp, smtp_options
+end

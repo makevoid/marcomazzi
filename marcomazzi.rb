@@ -3,6 +3,7 @@ PATH = path
 
 require "#{path}/config/env.rb"
 
+
 class Marcomazzi < Sinatra::Base
   include Voidtools::Sinatra::ViewHelpers
 

@@ -3,7 +3,7 @@ class Marcomazzi < Sinatra::Base
 
     @photos = Dir.glob("#{PATH}/public/img/home/*.jpg").map do |photo|
       File.basename photo
-    end
+    end.sort
     haml :index
   end
 
@@ -20,6 +20,16 @@ class Marcomazzi < Sinatra::Base
   end
 
   post "/mail" do
+    mail = params[:mail]
+    message = Mail.new do
+            to MAIN_EMAIL
+          from 'm4kevoid@gmail.com'
+      reply_to mail["from"]
+       subject "Ricevuto messaggio da: #{mail["name"]} <#{mail["from"]}>"
+          body mail["body"]
+    end
+    message.deliver
+
     haml :mail
   end
 end

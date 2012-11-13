@@ -1,29 +1,8 @@
-// come la sezione vecchia ma con un accordion per la descrizione
-
 .news
 
-  .title 2012:  November - Publication of the book "Relational Syntax" - Maschietto Editore, Florence
-  .text
-    %p
+  - NEWS.each do |news|
+    .title= news[:title]
+    .text
+      - news[:text].split("\n").map do |par|
+        %p= par
 
-  .title 2012: June - Publication of article on online magazine "Excursus"
-  .text
-    %p Article about poet Alessandro De Francesco
-    %p "Il poeta/artista si esprime tramite la ragion filosofica"
-
-  .title 2012: March - Publication of article on online magazine "Excursus"
-  .text
-    %p
-      "Cinema e realtà il nuovo orizzonte della diversità".
-
-  .title 2012: January - Publication of article about Seiichi Niikuni on "Smerilliana" n. 13
-  .text
-    %p "Per un'archeologia della Poesia concreta, Surrealismo e Dadaismo nella produzione giovanile di Seiichi Niikuni".
-
-  .title 2011: December 21 - Test screening of the videos "Tokyo Gnosis"
-  .text
-    %p "Parallel" and "The Days in Between" at Hosei University, Tokyo.
-
-  .title 2011: December - Publication of article on online magazine "Excursus" n. 30
-  .text
-    %p "Italiani a Tokyo, modelli senza canone".
