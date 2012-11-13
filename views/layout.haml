@@ -1,0 +1,21 @@
+%html
+  %head
+    %title Marco Mazzi
+    %link{ rel: "stylesheet", href: "/css/main.css" }
+
+    %meta{:content => "V07ABDj4FE0DEHJXqI7Su1aE0PcMvRUcZ3YGFzV-H1g", :name => "google-site-verification"}/
+  %body
+    #container
+      %header
+        %h1
+          / Marco Mazzi
+          %img{ src: "/img/marco_mazzi_logo.gif"}
+      %nav
+        - nav_link_to "home",     "/"
+        - nav_link_to "news",     "/news"
+        - nav_link_to "bio",      "/bio"
+        - nav_link_to "contacts", "/contacts"
+
+      %section.content{ class: subpath }= yield
+
+    %script{ type: "text/javascript", src: "/js/app.js" }

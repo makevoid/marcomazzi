@@ -1,0 +1,73 @@
+a {
+  text-decoration: none; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: black; }
+
+body {
+  background: white;
+  font-family: Georgia, "Times New Roman", Times, serif; }
+
+#container {
+  width: 96%;
+  margin: 30px auto 50px; }
+
+nav {
+  float: left;
+  width: 19%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.75em; }
+  nav a {
+    display: block;
+    margin: 0 0 12px -8px;
+    padding: 0 0 0 8px; }
+    nav a:hover {
+      font-style: oblique;
+      color: #999999; }
+  nav a.current {
+    background: url(/img/punto.gif) no-repeat left; }
+    nav a.current:hover {
+      font-style: normal;
+      color: black; }
+
+.content {
+  float: left;
+  width: 81%;
+  font-size: 0.8em;
+  margin: 0 0 60px 0; }
+
+.home img {
+  width: 100%;
+  margin: 0 0 20px 0; }
+
+.bio .year {
+  font-style: oblique; }
+
+.news {
+  font-size: 0.9em;
+  margin: 0 0 5px 0; }
+  .news .title {
+    text-transform: uppercase; }
+  .news .text {
+    margin: 0 0 25px 0; }
+
+form input, form textarea {
+  font-size: 1em;
+  padding: 2px 5px;
+  display: block;
+  margin: 0 0 20px 0;
+  font-family: Georgia, "Times New Roman", Times, serif; }
+form input {
+  width: 50%; }
+form textarea {
+  width: 70%;
+  height: 140px;
+  padding: 5px 5px; }
+form input[type='submit'] {
+  width: 100px;
+  float: right;
+  margin-right: 35%; }

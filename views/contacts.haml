@@ -1,0 +1,6 @@
+%form{ action: "/mail", method: "post" }
+  %input{ name: "mail[name]", placeholder: "name", type: "text" }
+  %input{ name: "mail[from]", placeholder: "email", type: "text" }
+  %textarea{ name: "mail[body]" }
+
+  %input{ value: "Send", type: "submit" }

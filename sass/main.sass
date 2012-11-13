@@ -1,0 +1,80 @@
+$main: #000
+
+
+a
+  text-decoration: none
+
+body
+  margin: 0
+  padding: 0
+
+
+a
+  color: $main
+
+body
+  background: #FFF
+  font-family: Georgia, "Times New Roman", Times, serif
+
+#container
+  width: 96%
+  margin: 30px auto 50px
+
+nav
+  float: left
+  width: 19%
+  font-family: Georgia, "Times New Roman", Times, serif
+  font-size: 0.75em
+  a
+    display: block
+    margin: 0 0 12px -8px
+    padding: 0 0 0 8px
+    &:hover
+      font-style: oblique
+      color: #999
+  a.current
+    background: url(/img/punto.gif) no-repeat left
+    &:hover
+      font-style: normal
+      color: $main
+
+.content
+  float: left
+  width: 81%
+  font-size: 0.8em
+  margin: 0 0 60px 0
+
+.home
+  img
+    width: 100%
+    margin: 0 0 20px 0
+
+.bio
+  .year
+    font-style: oblique
+
+.news
+  font-size: 0.9em
+  margin: 0 0 5px 0
+  .title
+    text-transform: uppercase
+  .text
+    margin: 0 0 25px 0
+
+form
+  input, textarea
+    font-size: 1em
+    padding: 2px 5px
+    display: block
+    margin:  0 0 20px 0
+    font-family: Georgia, "Times New Roman", Times, serif
+  input
+    width: 50%
+  textarea
+    width: 70%
+    height: 140px
+    padding: 5px 5px
+  input[type='submit']
+    width: 100px
+    float: right
+    margin-right: 35%
