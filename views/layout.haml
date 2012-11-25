@@ -4,7 +4,8 @@
     %link{ rel: "stylesheet", href: "/css/main.css" }
     %meta{ charset: "utf-8" }
     %meta{ :"http-equiv" => "X-UA-Compatible", content: "IE=edge" }
-    %meta{ name: "description", content: "Marco Mazzi - Website" }
+    - meta_description = "Marco Mazzi - Website"
+    %meta{ name: "description", content: meta_description }
     %meta{ name: "keywords", content: "marco mazzi, mazzi, artist, photography, art" }
     %meta{ name: "author", content: "Francesco 'makevoid' Canessa" }
     
@@ -12,7 +13,8 @@
     %meta{ property: "og:url", content: "http://marcomazzi.net" }/
     %meta{ property: "og:type", content: "website" }/
     %meta{ property: "og:site_name", content: "Marco Mazzi" }/
-    %meta{ property: "og:image", content: "http://marcomazzi.net/imgs/marco_mazzi_logo_fb.png" }/
+    %meta{ property: "og:image", content: "http://marcomazzi.net/img/marco_mazzi_logo_fb.png" }/
+    %meta{ property: "og:description", content: meta_description }/
     %meta{ property: "fb:admins", content: "makevoid" }/
     
     %meta{ content: "V07ABDj4FE0DEHJXqI7Su1aE0PcMvRUcZ3YGFzV-H1g", name: "google-site-verification"}/
