@@ -4,7 +4,7 @@ img {
 a {
   text-decoration: none; }
 
-body {
+html, body {
   margin: 0;
   padding: 0; }
 
@@ -29,7 +29,8 @@ nav {
   width: 50%;
   font-size: 0.7em;
   margin: 1px 0 10px;
-  float: right; }
+  float: right;
+  text-align: right; }
   nav a {
     margin: 0 0 0 -8px;
     padding: 0 0 0 8px; }
