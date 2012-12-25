@@ -10,37 +10,37 @@ a {
 
 body {
   background: white;
-  font-family: Georgia, "Times New Roman", Times, serif; }
+  font-family: Verdana, Arial, Helvetica, sans-serif; }
 
 #container {
   width: 96%;
-  margin: 30px auto 50px; }
+  margin: 5px auto 50px; }
+
+h1 {
+  font-size: 0.8em;
+  text-transform: uppercase; }
 
 nav {
-  float: left;
-  width: 19%;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 0.75em; }
+  text-transform: uppercase;
+  font-size: 0.7em;
+  margin: 1px 0 10px;
+  float: right; }
   nav a {
-    display: block;
-    margin: 0 0 12px -8px;
+    margin: 0 0 0 -8px;
     padding: 0 0 0 8px; }
     nav a:hover {
-      font-style: oblique;
       color: #999999; }
-  nav a.current {
-    background: url(/img/punto.gif) no-repeat left; }
-    nav a.current:hover {
-      font-style: normal;
-      color: black; }
+  nav a.current:hover {
+    font-style: normal;
+    color: black; }
 
 .content {
   float: left;
-  width: 81%;
+  width: 100%;
   font-size: 0.8em;
   margin: 0 0 60px 0; }
 
-.home img {
+.home img, .works img {
   width: 100%;
   margin: 0 0 20px 0; }
 
@@ -58,7 +58,7 @@ nav {
     margin: 0 0 25px 0; }
 
 p.small {
-  font-size: 0.9em;
+  font-size: 0.7em;
   float: right; }
 
 form input, form textarea {

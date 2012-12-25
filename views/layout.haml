@@ -21,16 +21,16 @@
 
   %body
     #container
-      %header
-        %h1
-          / Marco Mazzi
-          %img{ src: "/img/marco_mazzi_logo.gif"}
       %nav
         - nav_link_to "home",     "/"
         - nav_link_to "news",     "/news"
+        - nav_link_to "works",     "/works"
         - nav_link_to "bio",      "/bio"
         - nav_link_to "contacts", "/contacts"
 
+      %header
+        %h1
+          - link_to "Marco Mazzi", "/"
       %section.content{ class: subpath }= yield
 
     %script{ type: "text/javascript", src: "/js/app.js" }

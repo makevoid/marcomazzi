@@ -1,5 +1,6 @@
 .home
-  - @photos.each do |photo|
-    %img{ src: "/img/home/#{photo}" }
+  - @photos[4..4].each do |photo|
+    %a{ href: "/works" }
+      %img{ src: "/img/home/#{photo}" }
 
-  %p.small &copy; 2012, Diego Cossentino and Marco Mazzi.
+%p.small &copy; 2013, Diego Cossentino and Marco Mazzi.

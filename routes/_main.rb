@@ -1,14 +1,23 @@
 class Marcomazzi < Sinatra::Base
-  get "/" do
 
+  def load_photos
     @photos = Dir.glob("#{PATH}/public/img/home/*.jpg").map do |photo|
       File.basename photo
     end.sort
+  end
+
+  get "/" do
+    load_photos
     haml :index
   end
 
   get "/news" do
     haml :news
+  end
+
+  get "/works" do
+    load_photos
+    haml :works
   end
 
   get "/bio" do
