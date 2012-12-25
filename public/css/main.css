@@ -1,3 +1,6 @@
+img {
+  border: 0; }
+
 a {
   text-decoration: none; }
 
@@ -18,10 +21,12 @@ body {
 
 h1 {
   font-size: 0.8em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  width: 50%; }
 
 nav {
   text-transform: uppercase;
+  width: 50%;
   font-size: 0.7em;
   margin: 1px 0 10px;
   float: right; }
