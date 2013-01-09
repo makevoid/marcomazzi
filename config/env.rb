@@ -23,6 +23,7 @@ require_all "#{path}/models"
 require "#{path}/lib/simple_article_format"
 
 NEWS = SimpleArticleFormat.load "#{path}/config/news.saf"
+WORKS = SimpleArticleFormat.load "#{path}/config/works.saf"
 
 # email
 

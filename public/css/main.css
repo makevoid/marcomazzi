@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 img {
   border: 0; }
 
@@ -11,13 +14,17 @@ html, body {
 a {
   color: black; }
 
+a:hover {
+  color: #555555; }
+
 body {
   background: white;
   font-family: Verdana, Arial, Helvetica, sans-serif; }
 
 #container {
   width: 96%;
-  margin: 5px auto 50px; }
+  margin: 5px auto 50px;
+  max-width: 1100px; }
 
 h1 {
   font-size: 0.8em;
@@ -40,15 +47,43 @@ nav {
     font-style: normal;
     color: black; }
 
+p {
+  margin: 0 0 1em 0; }
+
 .content {
   float: left;
   width: 100%;
   font-size: 0.8em;
   margin: 0 0 60px 0; }
 
-.home img, .works img {
-  width: 100%;
+.home img {
+  width: 50%; }
+
+.work h1 {
+  font-weight: bold;
+  font-size: 1em; }
+.work .text {
+  text-align: justify;
+  margin: 0 0 30px 0; }
+.work img {
+  width: 100%; }
+.work .imgbox {
+  font-size: 0.85em;
+  text-align: right;
   margin: 0 0 20px 0; }
+.work .imgbox.vertical {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.work.relational_syntax .text {
+  float: left;
+  width: 50%; }
+.work.relational_syntax img.cover {
+  float: left;
+  padding: 0 2% 0 0%;
+  width: 50%; }
 
 .bio .year {
   font-style: oblique; }
@@ -66,6 +101,11 @@ nav {
 p.small {
   font-size: 0.7em;
   float: right; }
+
+.works a {
+  font-weight: bold;
+  display: block;
+  margin: 5px 0 8px; }
 
 form input, form textarea {
   font-size: 1em;

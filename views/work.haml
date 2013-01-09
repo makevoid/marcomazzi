@@ -1,0 +1,15 @@
+.work{ class: @work[:name] }
+  %h1= @work[:title]
+
+  - if @work[:name] == "relational_syntax"
+    %img.cover{ src: "/img/relational_syntax_cover.jpg" }
+
+  .text
+    - @work[:text].split("\n").map do |par|
+      %p= par
+
+  - caption = captions_for @work[:name]
+  - @photos.each_with_index do |photo, idx|
+    .imgbox{ class: "#{"vertical" if photo[:vertical]}" }
+      %img{ src: "/img/#{@work[:name]}/#{photo[:name]}" }
+      = caption[idx]

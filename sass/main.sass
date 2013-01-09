@@ -1,5 +1,8 @@
 $main: #000
 
+*
+  box-sizing: border-box
+
 img
   border: 0
 
@@ -13,6 +16,8 @@ html, body
 
 a
   color: $main
+a:hover
+  color: #555
 
 body
   background: #FFF
@@ -22,6 +27,7 @@ body
 #container
   width: 96%
   margin: 5px auto 50px
+  max-width: 1100px
 
 h1
   font-size: 0.8em
@@ -47,16 +53,49 @@ nav
       font-style: normal
       color: $main
 
+p
+  margin: 0 0 1em 0
+
 .content
   float: left
   width: 100%
   font-size: 0.8em
   margin: 0 0 60px 0
 
-.home, .works
+.home img
+  width: 50%
+
+.work
+  h1
+    font-weight: bold
+    font-size: 1em
+  .text
+    text-align: justify
+    margin: 0 0 30px 0
+
   img
     width: 100%
+
+  .imgbox
+    font-size: 0.85em
+    text-align: right
     margin: 0 0 20px 0
+
+  .imgbox.vertical
+    width: 50%
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+
+.work.relational_syntax
+  .text
+    float: left
+    width: 50%
+  img.cover
+    float: left
+    padding: 0 2% 0 0%
+    width: 50%
 
 .bio
   .year
@@ -75,6 +114,12 @@ nav
 p.small
   font-size: 0.7em
   float: right
+
+.works
+  a
+    font-weight: bold
+    display: block
+    margin: 5px 0 8px
 
 form
   input, textarea

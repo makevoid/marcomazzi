@@ -10,7 +10,10 @@ gem "json"
 gem "haml"
 gem "sass"
 
+gem "dimensions"
+
 gem "mail"
+gem "RedCloth"
 
 group :development do
   gem "foreman"

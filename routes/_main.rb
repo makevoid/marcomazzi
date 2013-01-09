@@ -1,13 +1,21 @@
 class Marcomazzi < Sinatra::Base
 
-  def load_photos
-    @photos = Dir.glob("#{PATH}/public/img/home/*.jpg").map do |photo|
-      File.basename photo
-    end.sort
+  helpers  do
+    def captions_for(work)
+      captions = SimpleArticleFormat.load "#{PATH}/public/img/#{work}/captions.saf"
+      captions.map{ |c| RedCloth.new(c[:title]).to_html }
+    end
+  end
+
+  def load_photos(dir)
+    @photos = Dir.glob("#{PATH}/public/img/#{dir}/*.jpg").map do |photo|
+      dimensions = Dimensions.dimensions photo
+      vertical = dimensions[0] < dimensions[1]
+      { name: File.basename(photo), vertical: vertical }
+    end.sort_by{ |p| p[:name] }
   end
 
   get "/" do
-    load_photos
     haml :index
   end
 
@@ -16,8 +24,13 @@ class Marcomazzi < Sinatra::Base
   end
 
   get "/works" do
-    load_photos
     haml :works
+  end
+
+  get "/works/*" do |work|
+    @work = WORKS.find{ |w| w[:name] == work }
+    load_photos work
+    haml :work
   end
 
   get "/bio" do
