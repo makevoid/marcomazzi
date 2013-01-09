@@ -11,5 +11,5 @@
   - caption = captions_for @work[:name]
   - @photos.each_with_index do |photo, idx|
     .imgbox{ class: "#{"vertical" if photo[:vertical]}" }
-      %img{ src: "/img/#{@work[:name]}/#{photo[:name]}" }
-      = caption[idx]
+      %img{ alt: caption[idx], src: "/img/#{@work[:name]}/#{photo[:name]}" }
+      = RedCloth.new(caption[idx]).to_html

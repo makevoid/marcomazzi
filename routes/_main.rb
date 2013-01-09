@@ -3,7 +3,7 @@ class Marcomazzi < Sinatra::Base
   helpers  do
     def captions_for(work)
       captions = SimpleArticleFormat.load "#{PATH}/public/img/#{work}/captions.saf"
-      captions.map{ |c| RedCloth.new(c[:title]).to_html }
+      captions.map{ |c| c[:title] }
     end
   end
 
