@@ -13,6 +13,9 @@ html, body {
   margin: 0;
   padding: 0; }
 
+.clear {
+  clear: both; }
+
 a {
   color: black; }
 
@@ -72,9 +75,14 @@ p {
 .work .imgbox {
   font-size: 0.85em;
   text-align: right;
-  margin: 0 0 20px 0; }
+  margin: 0 0 20px 0;
+  display: block;
+  width: auto;
+  float: left; }
 .work .imgbox.vertical {
   width: 50%; }
+.work .imgbox.full {
+  width: 100%; }
 
 .work.relational_syntax .text {
   float: left;
@@ -122,3 +130,17 @@ form input[type='submit'] {
   width: 100px;
   float: right;
   margin-right: 35%; }
+
+iframe.video {
+  width: 41%;
+  height: 300px;
+  display: block;
+  margin: 0 0 40px 0; }
+
+.caption {
+  margin: 0 0 40px 0;
+  text-align: right; }
+
+img.home {
+  width: 100%;
+  margin: 40px 0 0; }

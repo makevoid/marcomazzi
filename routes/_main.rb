@@ -11,8 +11,8 @@ class Marcomazzi < Sinatra::Base
     @photos = Dir.glob("#{PATH}/public/img/#{dir}/*.jpg").map do |photo|
       dimensions = Dimensions.dimensions photo
       vertical = dimensions[0] < dimensions[1]
-      { name: File.basename(photo), vertical: vertical }
-    end.sort_by{ |p| p[:name] }
+      { name: File.basename(photo), vertical: vertical, width: dimensions[0], height: dimensions[1] }
+    end.sort_by{ |p| p[:name].to_i }
   end
 
   get "/" do

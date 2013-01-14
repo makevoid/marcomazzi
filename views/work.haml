@@ -10,6 +10,11 @@
 
   - caption = captions_for @work[:name]
   - @photos.each_with_index do |photo, idx|
-    .imgbox{ class: "#{"vertical" if photo[:vertical]}" }
+
+    - options = { class: "#{"vertical" if photo[:vertical]}" }
+    - if photo[:width] < LAYOUT_MAX_WIDTH
+      - options.merge!( width: photo[:width], height: photo[:height] )
+    .imgbox{ options }
       %img{ alt: caption[idx], src: "/img/#{@work[:name]}/#{photo[:name]}" }
-      = RedCloth.new(caption[idx]).to_html
+      = RedCloth.new(caption[idx] || "").to_html
+    .clear

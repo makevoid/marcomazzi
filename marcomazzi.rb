@@ -9,6 +9,8 @@ class Marcomazzi < Sinatra::Base
 
   MAIN_EMAIL = "marco_mazzi@hotmail.com"
 
+  LAYOUT_MAX_WIDTH = 1100
+
   # partial :comment, { comment: "blah" }
   # partial :comment, comment
 

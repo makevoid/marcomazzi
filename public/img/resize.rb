@@ -7,6 +7,7 @@ photos.each_with_index do |photo, idx|
   
   # black/white
   # cmd = "convert #{photo}  -geometry 1100x -density 72 -colorspace gray #{idx}.jpg"
+  # convert source.jpg  -geometry 1100x -density 72 out.jpg 
   cmd = "convert #{photo}  -geometry 1100x -density 72 #{idx}.jpg"
   puts cmd
   `#{cmd}`
