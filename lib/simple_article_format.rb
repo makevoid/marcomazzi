@@ -2,7 +2,7 @@
 
 class SimpleArticleFormat
   def self.load(file)
-    content = File.read file
+    content = File.open(file, "r:utf-8").read
     new(content).parse
   end
 
