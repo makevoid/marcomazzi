@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class SimpleArticleFormat
   def self.load(file)
     content = File.read file
