@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 path = File.expand_path '../', __FILE__
 PATH = path
 
