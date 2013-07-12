@@ -169,4 +169,7 @@ img.syntax {
 .gal_two img {
   float: left;
   width: 45%;
-  margin: 0 1% 1% 0; }
+  margin: 1% 1% 1% 0; }
+
+.spacer {
+  margin: 0 0 20px 0; }
