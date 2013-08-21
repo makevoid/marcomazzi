@@ -171,5 +171,13 @@ img.syntax {
   width: 45%;
   margin: 0.6% 0.6% 0.6% 0; }
 
+.gal_three.gal img {
+  width: 45%;
+  display: block;
+  float: none;
+  margin-bottom: 12px; }
+.gal_three.gal img.small {
+  width: 30%; }
+
 .spacer {
   margin: 0 0 20px 0; }
