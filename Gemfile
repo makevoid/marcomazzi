@@ -10,6 +10,8 @@ gem "json"
 gem "haml"
 gem "sass"
 
+gem "haml-contrib"
+
 gem "dimensions"
 
 gem "mail"
