@@ -1,4 +1,4 @@
-source :rubygems
+source "http://rubygems.org"
 
 gem "sinatra"
 gem "json"
@@ -25,7 +25,7 @@ group :development do
   gem "guard-coffeescript", require: false
   gem "guard-livereload",   require: false
   # gem "growl"
-  
+
   gem "thin"
 end
 
